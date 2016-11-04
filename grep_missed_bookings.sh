@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Version 0.3
+# Version 0.3.1
 #
 # This script catches all appearences of $searchstr.
 # grep command displays $window lines above $searchstr.
@@ -8,9 +8,9 @@
 # which gets for the appearance of $regstr.
 # Output should be the user data of failed registrations
 #
-searchstr="ECONNREFUSED"                  
+searchstr="ECONNREFUSED"
 # search string for webserver error
-regstr='INSERT INTO `registrations`'  
+regstr='INSERT INTO `registrations`'
 # search string for backward search
 window=5
 # amount of lines for backward search
@@ -22,10 +22,10 @@ errmsg_exit (){
 }
 
 if [ $# -eq 0 ]; then
-  errmsg_exit "Usage: $(basename $0) logfile" "$?"
+  errmsg_exit "Usage: $(basename $0) logfile" "1"
 else
   if ! [ -e $1 ]; then
-    errmsg_exit "$(basename $0): $1 doesn't exist." "$?"
+    errmsg_exit "$(basename $0): $1 doesn't exist." "2"
   fi
 fi
 
@@ -37,7 +37,9 @@ tac | grep "$regstr" | tac | \
 awk -F 'VALUES \(' '{ print $2 }' | tr -d "\'\[\]" | awk -F '\)$' '{print $1}' | \
 # printf fields seperated by ','. Print 'date'-field first
 awk -F ',' '{ printf $NF" "; for(i=1; i<NF; i++ ){ printf $i }; printf "\n"}' | \
-# cut leading :blank: and look for double lines while skipping 'date'-field
+# cut leading :blank: and look for double lines skipping leading 'date'-field
 sed 's/^[ \t]*//' | uniq -f 2
 #
+#
+exit 0
 #
