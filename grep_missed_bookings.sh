@@ -7,14 +7,15 @@
 # The grep output is piped via tac to next grep command
 # which gets for the appearance of $regstr.
 # Output should be the user data of failed registrations
-#
-searchstr="ECONNREFUSED"
-# search string for webserver error
-regstr='INSERT INTO `registrations`'
-# search string for backward search
-window=5
-# amount of lines for backward search
 
+# search string for webserver error
+searchstr="ECONNREFUSED"
+# search string for backward search
+regstr='INSERT INTO `registrations`'
+# amount of lines for backward search
+window=5
+
+# Exit with errormessage and exit code.
 errmsg_exit (){
   echo "$1"
   echo "Nothing to do, exiting."
