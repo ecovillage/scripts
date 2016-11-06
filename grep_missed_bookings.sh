@@ -40,7 +40,6 @@ awk -F 'VALUES \(' '{ print $2 }' | tr -d "\'\[\]" | awk -F '\)$' '{print $1}' |
 awk -F ',' '{ printf $NF" "; for(i=1; i<NF; i++ ){ printf $i }; printf "\n"}' | \
 # cut leading :blank: and look for double lines skipping leading 'date'-field
 sed 's/^[ \t]*//' | uniq -f 2
-#
-#
+
+
 exit 0
-#
