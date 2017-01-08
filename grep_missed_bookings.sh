@@ -23,10 +23,10 @@ errmsg_exit (){
 }
 
 if [ $# -eq 0 ]; then
-  errmsg_exit "Usage: $(basename $0) logfile" "1"
+  errmsg_exit "Usage: $(basename "$0") logfile" "1"
 else
   if ! [ -e $1 ]; then
-    errmsg_exit "$(basename $0): $1 doesn't exist." "2"
+    errmsg_exit "$(basename "$0"): "$1" doesn't exist." "2"
   fi
 fi
 
