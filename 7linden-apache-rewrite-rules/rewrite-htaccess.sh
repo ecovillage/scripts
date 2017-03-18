@@ -12,7 +12,8 @@
 # define redirection patterns from OLD_URLs to NEW_URLs.
 
 # Exit on errors
-set -euo pipefail
+set -eu
+# set -o pipefail exits script immediately after first call of rewrite_rules ()
 
 SOURCE="http://www.siebenlinden.de"
 DEST="http://draft.siebenlinden.org"
