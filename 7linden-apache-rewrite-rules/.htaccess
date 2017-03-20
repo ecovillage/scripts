@@ -29,98 +29,67 @@ RewriteCond %{QUERY_STRING} ^id=uebernachtenhtml&L=2$
 RewriteRule .* http://draft.siebenlinden.org/en/seminar-and-guest-service/? [R=302,L,R]
 http://www.siebenlinden.de/ http://draft.siebenlinden.org/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=1(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/? [R=302,L,R]
+?id=1 http://draft.siebenlinden.org/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=2(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/? [R=302,L,R]
+?id=2 http://draft.siebenlinden.org/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=3(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/seminare/calendar/? [R=302,L,R]
+?id=3 http://draft.siebenlinden.org/de/seminare/calendar/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=110(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/seminare/unser-gaestebetrieb/? [R=302,L,R]
+?id=110 http://draft.siebenlinden.org/de/seminare/unser-gaestebetrieb/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=142(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/seminare/barrierefreiheit/? [R=302,L,R]
+?id=142 http://draft.siebenlinden.org/de/seminare/barrierefreiheit/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=53(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/soziales/? [R=302,L,R]
+?id=53 http://draft.siebenlinden.org/de/oekodorf/soziales/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=53(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/soziales/? [R=302,L,R]
+?id=53&L=-1%27 http://draft.siebenlinden.org/de/oekodorf/soziales/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=57(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/soziales/entscheidungsfindung/? [R=302,L,R]
+?id=57&L=-1%27 http://draft.siebenlinden.org/de/oekodorf/soziales/entscheidungsfindung/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=63(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/soziales/kinderjugendliche/? [R=302,L,R]
+?id=63&L=qyflvfxebu http://draft.siebenlinden.org/de/oekodorf/soziales/kinderjugendliche/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=64(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/soziales/kinderjugendliche/? [R=302,L,R]
+?id=64&L=qyflvfxebu http://draft.siebenlinden.org/de/oekodorf/soziales/kinderjugendliche/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=67(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/aktuelle-projekte/schulgruendungsversuch-lindenschule/? [R=302,L,R]
+?id=67&L=0 http://draft.siebenlinden.org/de/aktuelle-projekte/schulgruendungsversuch-lindenschule/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=95(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/soziales/junge-leute/? [R=302,L,R]
+?id=95&L=qyflvfxebu http://draft.siebenlinden.org/de/oekodorf/soziales/junge-leute/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=66(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/kulturweltsicht/kulturelle-selbsversorgung/? [R=302,L,R]
+?id=66&L=2%2Ffckeditor%2Feditor%2Ffilemanager%2Fupload%2Ftest.html http://draft.siebenlinden.org/de/oekodorf/kulturweltsicht/kulturelle-selbsversorgung/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=78(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/vernetzung/politisches-engagement/? [R=302,L,R]
+?id=78 http://draft.siebenlinden.org/de/vernetzung/politisches-engagement/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=81(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/vernetzung/regionales-engagement/? [R=302,L,R]
+?id=81&L=%273 http://draft.siebenlinden.org/de/vernetzung/regionales-engagement/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=82(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/vernetzung/forschung/? [R=302,L,R]
+?id=82&L=qyflvfxebu http://draft.siebenlinden.org/de/vernetzung/forschung/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=83(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/vernetzung/auszeichnungen/? [R=302,L,R]
+?id=83&L=qyflvfxebu http://draft.siebenlinden.org/de/vernetzung/auszeichnungen/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=52(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/oekologie/? [R=302,L,R]
+?id=52&L=2%2Ffckeditor%2Feditor%2Ffilemanager%2Fupload%2Ftest.html http://draft.siebenlinden.org/de/oekodorf/oekologie/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=71(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/oekologie/permakultur/? [R=302,L,R]
+?id=71&L=fzxwysapzl http://draft.siebenlinden.org/de/oekodorf/oekologie/permakultur/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=70(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/oekologie/eigenanbau/? [R=302,L,R]
+?id=70&L=2%27A%3D0%22%22 http://draft.siebenlinden.org/de/oekodorf/oekologie/eigenanbau/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=69(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/kulturweltsicht/ernaehrung/? [R=302,L,R]
+?id=69&L=2%27A%3D0%22%22 http://draft.siebenlinden.org/de/oekodorf/kulturweltsicht/ernaehrung/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=79(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/oekologie/wald/? [R=302,L,R]
+?id=79&L=2%27A%3D0%22%22 http://draft.siebenlinden.org/de/oekodorf/oekologie/wald/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=68(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/oekologie/oekologisch-bauen/? [R=302,L,R]
+?id=68 http://draft.siebenlinden.org/de/oekodorf/oekologie/oekologisch-bauen/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=72(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/oekologie/heizen/? [R=302,L,R]
+?id=72 http://draft.siebenlinden.org/de/oekodorf/oekologie/heizen/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=74(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/oekologie/wasserkreislauf/? [R=302,L,R]
+?id=74 http://draft.siebenlinden.org/de/oekodorf/oekologie/wasserkreislauf/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=76(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/oekologie/mobilitaet-2/? [R=302,L,R]
+?id=76 http://draft.siebenlinden.org/de/oekodorf/oekologie/mobilitaet-2/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=55(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/oekonomie/? [R=302,L,R]
+?id=55&L=xvirsfqywy http://draft.siebenlinden.org/de/oekodorf/oekonomie/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=141(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/vernetzung/kooperationsprojekte/? [R=302,L,R]
+?id=141&L=xvirsfqywy http://draft.siebenlinden.org/de/vernetzung/kooperationsprojekte/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=92(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/betriebeprodukte/? [R=302,L,R]
+?id=92&L=-1%27 http://draft.siebenlinden.org/de/oekodorf/betriebeprodukte/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=4(&L=.*)*$
-RewriteRule .* http://bildarchiv.siebenlinden.de/? [R=302,L,R]
+?id=4 http://bildarchiv.siebenlinden.de/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
-RewriteCond %{QUERY_STRING} ^id=101(&L=.*)*$
-RewriteRule .* http://draft.siebenlinden.org/de/aktuelle-projekte/news/? [R=302,L,R]
+?id=101 http://draft.siebenlinden.org/de/aktuelle-projekte/news/? [R=302,L,R]
 RewriteCond %{QUERY_STRING} ^.(.*)$
 RewriteRule ^index\.php$ http://draft.siebenlinden.org/? [R=302,L,R]
 RewriteRule ^index\.php$ - [L]
