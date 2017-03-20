@@ -27,6 +27,7 @@ RewriteRule .* http://draft.siebenlinden.org/en/get-to-know-us/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
 RewriteCond %{QUERY_STRING} ^id=uebernachtenhtml&L=2$
 RewriteRule .* http://draft.siebenlinden.org/en/seminar-and-guest-service/? [R=302,L,R]
+http://www.siebenlinden.de/ http://draft.siebenlinden.org/? [R=302,L,R]
 RewriteCond %{REQUEST_URI} ^\/index\.php$
 RewriteCond %{QUERY_STRING} ^id=1(&L=.*)*$
 RewriteRule .* http://draft.siebenlinden.org/? [R=302,L,R]
@@ -117,6 +118,9 @@ RewriteRule .* http://draft.siebenlinden.org/de/oekodorf/betriebeprodukte/? [R=3
 RewriteCond %{REQUEST_URI} ^\/index\.php$
 RewriteCond %{QUERY_STRING} ^id=4(&L=.*)*$
 RewriteRule .* http://bildarchiv.siebenlinden.de/? [R=302,L,R]
+RewriteCond %{REQUEST_URI} ^\/index\.php$
+RewriteCond %{QUERY_STRING} ^id=101(&L=.*)*$
+RewriteRule .* http://draft.siebenlinden.org/de/aktuelle-projekte/news/? [R=302,L,R]
 RewriteCond %{QUERY_STRING} ^.(.*)$
 RewriteRule ^index\.php$ http://draft.siebenlinden.org/? [R=302,L,R]
 RewriteRule ^index\.php$ - [L]
