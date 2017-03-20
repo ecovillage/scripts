@@ -68,7 +68,7 @@ grep "&L=3 " "$1" > "$FIFO" &
 rewrite_rules 'sed "s/?id=\(.*\) /RewriteCond %{QUERY_STRING} ^id=\1$\nRewriteRule \.\* /"'
 # now map out english- and french-speaking pages:
 grep -v "&L=2 " "$1" | grep  -v "&L=3 " > "$FIFO" &
-rewrite_rules 'sed "s/?id=\([0-9]|[a-z]*\).* /RewriteCond %{QUERY_STRING} ^id=\1(\&L=.*)*$\nRewriteRule \.\* /"'
+rewrite_rules 'sed "s/?id=\([0-9]*\).* /RewriteCond %{QUERY_STRING} ^id=\1(\&L=.*)*$\nRewriteRule \.\* /"'
 
 cat << EOF
 RewriteCond %{QUERY_STRING} ^.(.*)$
