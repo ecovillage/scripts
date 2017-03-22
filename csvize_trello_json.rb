@@ -22,7 +22,7 @@ member_db = members.map{|m| [m["id"], m["fullName"]]}.to_h
 cards.each {|c| c["list"] = list_db[c["idList"]]}
 cards.each {|c| c["members"] = member_db.values_at(*c["idMembers"])}
 
-header = ["List name", "Card", "Member"]
+header = ["List name", "Card", "Members"]
 
 csv_string = CSV.generate(col_sep: ';') do |csv|
   csv << header
