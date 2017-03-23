@@ -10,6 +10,12 @@
 require 'json'
 require 'csv'
 
+
+if ARGF.filename == "-" && STDIN.tty?
+  STDERR.puts "Nothing in STDIN and no file name(s) given, exiting."
+  exit 1
+end
+
 trello_data = JSON.parse(ARGF.read)
 
 lists   = trello_data["lists"]
