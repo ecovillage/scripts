@@ -32,3 +32,7 @@ Create a .htacces for apache with mod_rewrite to redirect from specific legacy t
 ## update_deb_repo
 
 Maintenance for in-house debian repositories.
+
+## piwik_consume_logfile_idsite1_siebenlinden.sh
+
+Import a apache access.log-style file into piwik.
