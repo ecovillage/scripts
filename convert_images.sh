@@ -2,6 +2,8 @@
 
 # Copyright Felix Wolfsteller 2017
 
+# Licensed under the GPLv3+
+
 # Convert all images in current directory to a max width or height of 1024px,
 # jpeg format, quality parameter of 85.
 # Fails directly if an image cant be converted (or isnt an image).

@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Copyright Felix Wolfsteller 2017
+# Call in the directory that should contain the stage.
 
 # Exit on errors
 set -euo pipefail
