@@ -16,7 +16,7 @@ then
   exit 1
 fi
 
-ACCESS_LOG_FILE=$(realpath "$1")
+ACCESS_LOG_FILE=$(readlink -m "$1")
 
 sudo chown www-data "$ACCESS_LOG_FILE"
 
