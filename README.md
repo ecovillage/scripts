@@ -36,3 +36,7 @@ Maintenance for in-house debian repositories.
 ## piwik_consume_logfile_idsite1_siebenlinden.sh
 
 Import a apache access.log-style file into piwik.
+
+## set_apt_proxy.sh
+
+Set or unset Sieben Linden specific apt-cacher-ng settings, needs zenity.
