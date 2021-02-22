@@ -45,7 +45,7 @@ sync_logs() {
 }
 
 import_logs() {
-  YESTERDAY_LOG="$TARGET_DIR"/$(date --date=yesterday +access.log.\%W.\%u.gz)
+  YESTERDAY_LOG="$TARGET_DIR"/$(date --date=yesterday +access.log.\%V.\%u.gz)
   echo "Importing $YESTERDAY_LOG"
   sudo -u www-data python3.5 /var/www/piwik/misc/log-analytics/import_logs.py \
     --url ${config[piwik_address]}  \
