@@ -37,9 +37,9 @@ Maintenance for in-house debian repositories.
 
 Import a apache access.log-style file into piwik.
 
-## import_siebenlinden.org_piwik.sh
+## import_siebenlinden.org_matomo.sh
 
-Import a apache access.log-style file into piwik (better).
+Import a apache access.log-style file into matomo (better).
 
 ## set_apt_proxy.sh
 
