@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Copyright Felix Wolfsteller 2017
+# Copyright Felix Wolfsteller 2017,2021
 
 # Licensed under the GPLv3+
 
-# rsync this and last weeks log data from website, import it into piwik
-# instance and munch it..
+# rsync this and last weeks log data from website, import it into matomo
+# (formerly called piwik) instance and munch it.
 # Reads configuration values from import_siebenlinden.org_piwik.sh.conf
 
 # Exit on errors
@@ -21,7 +21,7 @@ get_config_values() {
       [piwik_idsite]="7"
   )
 
-  # Read /etc/7linden/cp-login.conf
+  # Read ./import_siebenlinden.org_piwik.sh.conf
   while read line
   do
       if echo $line | grep -F = &>/dev/null
