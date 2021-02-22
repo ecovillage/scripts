@@ -21,7 +21,7 @@ get_config_values() {
       [piwik_idsite]="7"
   )
 
-  # Read ./import_siebenlinden.org_piwik.sh.conf
+  # Read ./import_siebenlinden.org_matomo.sh.conf
   while read line
   do
       if echo $line | grep -F = &>/dev/null
@@ -29,7 +29,7 @@ get_config_values() {
           varname=$(echo "$line" | cut -d '=' -f 1)
           config[$varname]=$(echo "$line" | cut -d '=' -f 2-)
       fi
-  done < import_siebenlinden.org_piwik.sh.conf
+  done < import_siebenlinden.org_matomo.sh.conf
   TARGET_DIR="${config[local_log_location]}"/`date +%Y`
   LOG_SOURCE="${config[remote_log_address]}"
 }
