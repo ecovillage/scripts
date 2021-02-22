@@ -47,14 +47,13 @@ sync_logs() {
 import_logs() {
   YESTERDAY_LOG="$TARGET_DIR"/$(date --date=yesterday +access.log.\%W.\%u.gz)
   echo "Importing $YESTERDAY_LOG"
-  sudo -u www-data python /var/www/piwik/misc/log-analytics/import_logs.py \
+  sudo -u www-data python3.5 /var/www/piwik/misc/log-analytics/import_logs.py \
     --url ${config[piwik_address]}  \
     --log-format-regex='(?P<ip>\S+)\s+\S+\s+(?P<userid>\S+)\s+\[(?P<date>.*?)\s+(?P<timezone>.*?)\]\s+"\S+\s+(?P<path>.*?)\s+\S+"\s+(?P<status>\S+)\s+(?P<length>\S+)\s+(?P<host>[\w\-\.]*)\s+"(?P<referrer>.*?)"\s+"(?P<user_agent>.*?)"' \
     --idsite=${config[piwik_idsite]} \
     $YESTERDAY_LOG > $YESTERDAY_LOG-import.log
   cd /var/www/piwik/ && sudo -u www-data ./console core:archive \
     --force-idsites=${config[piwik_idsite]} \
-    --force-all-periods=315576000 \
     --force-date-last-n=1000 \
     --url=${config[piwik_address]}
 }
