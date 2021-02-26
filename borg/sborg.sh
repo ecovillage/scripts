@@ -12,8 +12,6 @@ set -euo pipefail
 
 trap 'echo $( date ) Backup interrupted >&2; exit 2' INT TERM
 
-script_path="$(basename $0)"
-script_args="$@"
 
 if [ -z "$1" ]
 then
@@ -23,6 +21,9 @@ fi
 
 conf_file="$1"
 
+shift
+
+script_args="$@"
 
 typeset -A config
 get_config_values() {
@@ -42,7 +43,7 @@ get_config_values() {
           varname=$(echo "$line" | cut -d '=' -f 1)
           config[$varname]=$(echo "$line" | cut -d '=' -f 2-)
       fi
-  done < "$script_path.conf"
+  done < "$conf_file"
 }
 
 export_env() {
