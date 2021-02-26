@@ -51,15 +51,13 @@ View cron jobs of all users.
 
 ## borg/
 
-The idea is the following:
-  * either copy the init and create files and use them with a conf file
-  * rename the script and the conf file (for multiple repos), e.g. borg_smb.sh
-    -> borg_smb.sh.conf
+### borg/sborg.sh
+Wrappers around borg, take configuration file as argument.
 
-### borg/borg_init.sh
+### borg/sborg_init.sh
+Wrapper around borg, take configuration file as argument, initializes a
+repository.
 
-Init the repo
-
-### borg/borg_create.sh
-
-Create and prune an archive in the repo
+### borg/sborg_create.sh
+Wrapper around borg, take configuration file as argument, create an archive and
+prune the repository.

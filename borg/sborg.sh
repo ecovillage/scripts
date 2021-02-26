@@ -15,6 +15,15 @@ trap 'echo $( date ) Backup interrupted >&2; exit 2' INT TERM
 script_path="$(basename $0)"
 script_args="$@"
 
+if [ -z "$1" ]
+then
+  echo "Specify configuration file as argument"
+  exit 1
+fi
+
+conf_file="$1"
+
+
 typeset -A config
 get_config_values() {
   # Init array with default values
