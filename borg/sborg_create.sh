@@ -34,6 +34,7 @@ get_config_values() {
       [keep_monthly]="3"
       [keep_yearly]="3"
       [source_dir]="/path/to/source/dir"
+      [exclude]=" "
   )
 
   # Read from supplied conf file
@@ -62,6 +63,7 @@ create_archive() {
       --stats                         \
       --show-rc                       \
       --compression lz4               \
+      --exclude "$config[exclude]"    \
       --exclude-caches                \
                                       \
       ::'{now}'                       \
