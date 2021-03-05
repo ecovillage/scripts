@@ -63,7 +63,7 @@ create_archive() {
       --stats                         \
       --show-rc                       \
       --compression lz4               \
-      --exclude "$config[exclude]"    \
+      --exclude "${config[exclude]}"  \
       --exclude-caches                \
                                       \
       ::'{now}'                       \
