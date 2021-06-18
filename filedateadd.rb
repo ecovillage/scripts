@@ -14,7 +14,7 @@ end
 
 directory = ARGV[0]
 now       = Time.now
-$now_s    = now.strftime("%Y%m")
+$now_s    = now.strftime("%Y-%m")
 
 def inject_timestamp(path)
   ext  = path.extname
@@ -26,8 +26,8 @@ end
 files = Dir.glob(directory + "/**").map{|f| Pathname.new(f)}.reject{|f| !f.file?}
 
 files.each do |path|
-  # already contains timestamp (e.g. something_202105.mp4)
-  if path.to_s =~ /_[0-9]{6}\..{3}/
+  # already contains timestamp (e.g. something_2021-05.mp4)
+  if path.to_s =~ /_[0-9]{4}-[0-9]{2}\..{3}/
     next
   end
 
