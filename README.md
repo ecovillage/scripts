@@ -29,6 +29,10 @@ Create a playground copy of a wordpress instance.  Would be WIP if work on it wo
 
 Create a .htacces for apache with mod_rewrite to redirect from specific legacy to new homepage pages.
 
+## filedateadd.rb
+
+Inject YYYYMM into file names.
+
 ## update_deb_repo
 
 Maintenance for in-house debian repositories.
